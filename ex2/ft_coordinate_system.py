@@ -1,6 +1,14 @@
 import math
 
 
+def calculate_distance(
+    p1: tuple[float, float, float],
+    p2: tuple[float, float, float] = (0.0, 0.0, 0.0),
+) -> float:
+    return math.sqrt(
+        (p2[0] - p1[0]) ** 2 + (p2[1] - p1[1]) ** 2 + (p2[2] - p1[2]) ** 2
+    )
+
 def get_player_pos() -> tuple[float, float, float]:
     while True:
         user_input: str = input("Enter new coordinates as floats in format 'x,y,z': ")
@@ -23,7 +31,6 @@ def get_player_pos() -> tuple[float, float, float]:
 
         if not has_error:
             return (parsed_coords[0], parsed_coords[1], parsed_coords[2])
-
 
 def main() -> None:
     print("=== Game Coordinate System ===")
