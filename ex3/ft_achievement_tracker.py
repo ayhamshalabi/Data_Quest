@@ -44,24 +44,50 @@ def main() -> None:
     print(f"Player Dylan: {player_4}\n")
 
     print(
-        f"All distinct achievements: {set.union(player_1, player_2, player_3, player_4)}\n"
+        f"All distinct achievements:"
+        f"{set.union(player_1, player_2, player_3, player_4)}\n"
     )
 
     print(
-        f"Common achievements: {set.intersection(player_1, player_2, player_3, player_4)}\n"
+        f"Common achievements: "
+        f"{set.intersection(player_1, player_2, player_3, player_4)}\n"
     )
 
-    print(f"Only Alice has: {set.difference(player_1, player_2, player_3, player_4)}")
-    print(f"Only Bob has: {set.difference(player_2, player_1, player_3, player_4)}")
-    print(f"Only Charlie has: {set.difference(player_3, player_1, player_2, player_4)}")
-    print(f"Only Dylan has: {set.difference(player_4, player_1, player_2, player_3)}\n")
+    print(
+        f"Only Alice has: "
+        f"{set.difference(player_1, player_2, player_3, player_4)}"
+    )
+    print(
+        f"Only Bob has: "
+        f"{set.difference(player_2, player_1, player_3, player_4)}"
+    )
+    print(
+        f"Only Charlie has: "
+        f"{set.difference(player_3, player_1, player_2, player_4)}"
+    )
+    print(
+        f"Only Dylan has: "
+        f"{set.difference(player_4, player_1, player_2, player_3)}\n"
+    )
 
     achievements: set[str] = set(all_achievements())
 
-    print(f"Alice is missing: {set.difference(achievements, player_1)}")
-    print(f"Bob is missing: {set.difference(achievements, player_2)}")
-    print(f"Charlie is missing: {set.difference(achievements, player_3)}")
-    print(f"Dylan is missing: {set.difference(achievements, player_4)}")
+    print(
+        f"Alice is missing: "
+        f"{set.difference(achievements, player_1)}"
+    )
+    print(
+        f"Bob is missing: "
+        f"{set.difference(achievements, player_2)}"
+    )
+    print(
+        f"Charlie is missing: "
+        f"{set.difference(achievements, player_3)}"
+    )
+    print(
+        f"Dylan is missing: "
+        f"{set.difference(achievements, player_4)}"
+    )
 
 
 if __name__ == "__main__":
