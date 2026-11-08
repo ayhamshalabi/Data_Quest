@@ -19,7 +19,7 @@ def gen_event() -> typing.Generator[tuple[str, str], None, None]:
     while True:
         player: str = random.choice(players)
         action: str = random.choice(actions)
-        yield (player, action)
+        yield player, action
 
 
 def consume_event(
