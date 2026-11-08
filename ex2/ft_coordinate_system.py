@@ -19,6 +19,7 @@ def get_player_pos() -> tuple[float, float, float]:
 
         if len(parts) != 3:
             print("Invalid syntax")
+            continue
 
         parsed_coords: list[float] = []
         has_error: bool = False
@@ -42,17 +43,19 @@ def main() -> None:
     print("Get a first set of coordinates")
     pos1: tuple[float, float, float] = get_player_pos()
 
-    print(f"Got a first tuple: ({pos1})")
+    print(f"Got a first tuple: {pos1}")
     print(f"It includes: X={pos1[0]}, Y={pos1[1]}, Z={pos1[2]}")
 
     dist_center: float = calculate_distance(pos1)
-    print(f"Distance to center: {dist_center:.4f}")
+    print(f"Distance to center: {round(dist_center, 4)}")
 
     print("Get a second set of coordinates")
     pos2: tuple[float, float, float] = get_player_pos()
 
     dist_between: float = calculate_distance(pos1, pos2)
-    print(f"Distance between the 2 sets of coordinates: {dist_between:.4f}")
+    print(
+        f"Distance between the 2 sets of coordinates: {round(dist_between, 4)}"
+    )
 
 
 if __name__ == "__main__":
